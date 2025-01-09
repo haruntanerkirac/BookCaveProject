@@ -14,5 +14,7 @@ namespace Entity.Concrete
         public string CategoryName { get; set; }
         public string CategoryDescription { get; set; }
         public bool CategoryStatus { get; set; }
+
+        public List<Review> Reviews { get; set; }
     }
 }

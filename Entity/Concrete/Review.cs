@@ -15,5 +15,10 @@ namespace Entity.Concrete
         public string ReviewImage { get; set; }
         public DateTime ReviewCreatedDate { get; set; }
         public bool ReviewStatus { get; set; }
+
+        public int CategoryID { get; set; }
+        public Category Category { get; set; }
+
+        public List<Comment> Comments { get; set; }
     }
 }

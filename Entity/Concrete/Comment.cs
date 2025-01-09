@@ -16,5 +16,8 @@ namespace Entity.Concrete
         public string CommentContent { get; set; }
         public DateTime CommentDate { get; set; }
         public bool CommentStatus { get; set; }
+
+        public int ReviewID { get; set; }
+        public Review Review { get; set; }
     }
 }
