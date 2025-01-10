@@ -1,0 +1,49 @@
+﻿@using Entity.Concrete
+@model List<Review>
+@{
+	ViewData["Title"] = "Index";
+	Layout = "~/Views/Shared/_UserLayout.cshtml";
+}
+
+<section class="section">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-9 col-md-12 col-sm-12 col-xs-12">
+				@foreach (var item in Model)
+				{
+					<div class="page-wrapper">
+						<div class="blog-list clearfix">
+							<div class="blog-box row">
+								<div class="col-md-4">
+									<div class="post-media">
+										<a href="#" title="">
+											<img src="~/BookCaveTema/upload/tech_blog_01.jpg" alt="" class="img-fluid">
+											<div class="hovereffect"></div>
+										</a>
+									</div><!-- end media -->
+								</div><!-- end col -->
+
+								<div class="blog-meta big-meta col-md-8">
+									<h4><a href="#" title="">@item.ReviewTitle</a></h4>
+									<p>@item.ReviewContent</p>
+									<small class="firstsmall"><a class="bg-orange" href="#" title="">@item.CategoryID</a></small>
+									<small><a href="tech-single.html" title="">@item.ReviewCreatedDate.ToShortDateString()</a></small>
+									<small><a href="tech-author.html" title="">YAZAR</a></small>
+									<small><a href="tech-single.html" title=""><i class="fa fa-eye"></i>0</a></small>
+								</div><!-- end meta -->
+							</div><!-- end blog-box -->
+
+							<hr class="invis">
+						</div>
+					</div>
+				}
+			</div>
+			<div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
+				<div class="sidebar">
+					@await Html.PartialAsync("_Partial1")
+					@await Html.PartialAsync("_Partial2")
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

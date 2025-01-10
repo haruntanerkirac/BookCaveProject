@@ -9,6 +9,6 @@ namespace DataAccess.Abstract
 {
     public interface IReviewDal : IGenericDal<Review>
     {
-        
+        List<Review> GetListWithCategory();
     }
 }
