@@ -12,5 +12,11 @@ namespace BookCaveProject.Controllers
             var values = reviewManager.GetAllReviews();
             return View(values);
         }
+
+        public IActionResult ReadAllReviews(int id)
+        {
+            var values = reviewManager.GetReviewById(id);
+            return View(values);
+        }
     }
 }
