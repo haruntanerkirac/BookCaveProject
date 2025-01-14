@@ -51,5 +51,15 @@ namespace Business.Concrete
         {
             return _reviewDal.GetListWithCategory();
         }
+
+        public int GetWriterWithReview(int reviewId)
+        {
+            return _reviewDal.GetAll(x => x.ReviewID == reviewId).Select(x => x.WriterID).FirstOrDefault();
+        }
+
+        public List<Review> GetReviewListWithWriter(int id)
+        {
+            return _reviewDal.GetAll(x => x.WriterID == id);
+        }
     }
 }

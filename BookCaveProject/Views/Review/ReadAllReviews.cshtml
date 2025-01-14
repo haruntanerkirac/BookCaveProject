@@ -59,7 +59,7 @@
 
 						<div class="custombox clearfix">
 							<h4 class="small-title">YORUM SAYISI?</h4>
-						@await Component.InvokeAsync("CommentListByBlog",new {id = ViewBag.i})	
+						@await Component.InvokeAsync("CommentListByReview",new {id = ViewBag.i})	
 						</div><!-- end custom-box -->
 
 						<hr class="invis1">
@@ -86,7 +86,7 @@
 			<div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
 				<div class="sidebar">
 					@await Html.PartialAsync("_Partial1")
-					@await Html.PartialAsync("_Partial2")
+					@await Component.InvokeAsync("RecentReviews", new{id = ViewBag.writerID})
 				</div>
 			</div>
 		</div>

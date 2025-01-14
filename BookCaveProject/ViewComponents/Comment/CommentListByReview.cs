@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace BookCaveProject.ViewComponents.Comment
 {
-    public class CommentListByBlog : ViewComponent
+    public class CommentListByReview : ViewComponent
     {
         CommentManager commentManager = new CommentManager(new EfCommentRepository());
         public IViewComponentResult Invoke(int id)

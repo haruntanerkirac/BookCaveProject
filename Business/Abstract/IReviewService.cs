@@ -15,5 +15,7 @@ namespace Business.Abstract
         List<Review> GetAllReviews();
         Review GetById(int id);
         List<Review> GetReviewListWithCategory();
+        List<Review> GetReviewListWithWriter(int id);
+        int GetWriterWithReview(int reviewId);
     }
 }

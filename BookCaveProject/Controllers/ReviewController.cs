@@ -15,6 +15,8 @@ namespace BookCaveProject.Controllers
 
         public IActionResult ReadAllReviews(int id)
         {
+            var writerID = reviewManager.GetWriterWithReview(id);
+            ViewBag.writerID = writerID;
             ViewBag.i = id;
             var values = reviewManager.GetReviewById(id);
             return View(values);
