@@ -1,0 +1,31 @@
+﻿@using Entity.Concrete
+@model List<About>
+
+@{
+	ViewData["Title"] = "Index";
+	Layout = "~/Views/Shared/_UserLayout.cshtml";
+}
+
+<style>
+	h1 {
+	color: black
+	}
+
+	p {
+	line-height: 1.6;
+	margin-bottom: 15px;
+	}
+</style>
+
+<section class="main-content-w3layouts-agileits">
+	<div class="container">
+		<h1>Hakkımızda</h1>
+		@foreach (var item in Model)
+		{
+			<p>@item.AboutDetails1</p>
+			<p>@item.AboutDetails2</p>
+			<a href="/Review/Index" class="btn">Kitap İncelemeleri</a>
+		}
+	</div>
+	<br />
+</section>
