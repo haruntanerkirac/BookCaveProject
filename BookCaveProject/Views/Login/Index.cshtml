@@ -1,0 +1,41 @@
+﻿@model Entity.Concrete.Writer
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_UserLayout.cshtml";
+}
+
+<section class="main-content-w3layouts-agileits">
+	<div class="page-title lb single-wrapper">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+					<h2>Giriş Yap </h2>
+				</div><!-- end col -->
+			</div><!-- end row -->
+		</div><!-- end container -->
+	</div><!-- end page-title -->
+	<br />
+	<div class="container">
+		<div class="inner-sec">
+			<div class="login p-5 bg-light mx-auto mw-100">
+				<form method="post">
+					<div class="form-row">
+						<div class="col-md-6 mb-3">
+							<label>Mail Adresi</label>
+							@Html.TextBoxFor(x => x.WriterMail, new { @class = "form-control" })
+						</div>
+					</div>
+					<div class="form-row">
+						<div class="form-group col-md-6">
+							<label>Password</label>
+							@Html.TextBoxFor(x => x.WriterPassword, new { @class = "form-control" })
+						</div>
+					</div>
+					<button type="submit" class="btn btn-primary submit mb-4">Giriş Yap</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</section>
+
